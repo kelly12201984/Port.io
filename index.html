@@ -22,10 +22,18 @@
       background-color: #2e2e2e;
       border-radius: 16px;
       padding: 32px;
-      max-width: 640px;
+      max-width: 720px;
       width: 100%;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
       text-align: center;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 3px solid #aa00ff;
     }
     h1 {
       font-size: 2rem;
@@ -41,6 +49,14 @@
       font-style: italic;
       margin-bottom: 1.5em;
       color: #ccc;
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 1.5em 0 0.5em;
+      color: #f2f2f2;
+      border-bottom: 1px solid #444;
+      padding-bottom: 4px;
     }
     .button-grid {
       display: grid;
@@ -69,35 +85,85 @@
       text-decoration: none;
       font-size: 1.2rem;
     }
+    form {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    button[type="submit"] {
+      background: linear-gradient(to right, #6a00ff, #aa00ff);
+      color: white;
+      font-weight: 600;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      transform: scale(1.03);
+    }
   </style>
 </head>
 <body>
   <div class="card">
+    <img src="assets/kelly_profile.JPG" alt="Kelly Noel" class="profile-img">
     <h1>Kelly Noel</h1>
     <h2>Data Scientist · Complexity Translator · Resolution Architect · Confidence Builder</h2>
     <p class="tagline">Here to turn "I never thought of that" into your team's next favorite idea.</p>
 
+    <div class="section-title">🧩 Apps</div>
     <div class="button-grid">
       <a class="button" href="https://tanksnip.streamlit.app/" target="_blank">TankSnip (Live)</a>
       <a class="button" href="https://github.com/kelly12201984/TankSnip-App" target="_blank">TankSnip Repo</a>
       <a class="button" href="https://kellys-ai-resume-reviewer.streamlit.app/" target="_blank">RedPen (Live)</a>
       <a class="button" href="https://github.com/kelly12201984/AI_resume_reviewer" target="_blank">RedPen Repo</a>
-      <a class="button" href="https://github.com/kelly12201984/debate-a-bot" target="_blank">Debate-A-Bot</a>
       <a class="button" href="https://kellys-debate-a-bot.streamlit.app/" target="_blank">Debate-A-Bot (Live)</a>
+      <a class="button" href="https://github.com/kelly12201984/debate-a-bot" target="_blank">Debate-A-Bot Repo</a>
+    </div>
+
+    <div class="section-title">📊 Machine Learning</div>
+    <div class="button-grid">
+      <a class="button" href="https://github.com/kelly12201984/Applied-ML" target="_blank">Applied ML Projects</a>
+    </div>
+
+    <div class="section-title">🧱 ETL & Databases</div>
+    <div class="button-grid">
       <a class="button" href="https://github.com/kelly12201984/ETL-Project" target="_blank">ETL Pipeline</a>
       <a class="button" href="https://github.com/kelly12201984/DataAdmin_DatabaseMgmt" target="_blank">Dog Adoption DB</a>
+    </div>
+
+    <div class="section-title">🎨 Visualizations</div>
+    <div class="button-grid">
       <a class="button" href="https://github.com/kelly12201984/F1_Data_Project" target="_blank">F1 Constructors Viz</a>
       <a class="button" href="https://github.com/kelly12201984/Viz-a-Thon-Onondaga-Water-Analysis" target="_blank">Viz-a-Thon Poster</a>
       <a class="button" href="https://github.com/kelly12201984/CO2-EV-Emissions-Analysis" target="_blank">CO₂ & EV Analysis</a>
-      <a class="button" href="https://github.com/kelly12201984/Applied-ML" target="_blank">Applied ML Projects</a>
+    </div>
+
+    <div class="section-title">Résumé</div>
+    <div class="button-grid">
       <a class="button" href="https://kelly12201984.github.io/assets/Kelly_Resume_Site.pdf" target="_blank">Résumé (PDF)</a>
-      <a class="button" href="mailto:kelly.noel.ds@gmail.com">Email Me</a>
     </div>
 
     <div class="socials">
       <a href="https://github.com/kelly12201984" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/kelly-arseneau-9459b1273/" target="_blank">LinkedIn</a>
     </div>
+
+    <div class="section-title">Contact Me</div>
+    <form action="https://formspree.io/f/mleqvpkg" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </body>
 </html>
